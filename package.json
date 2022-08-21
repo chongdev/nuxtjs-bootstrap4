@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "build:jquery": "cp node_modules/jquery/dist/jquery.slim.min.js static/jquery/",
+    "build:images": "cp -R src/assets/images/ static/images/",
+    "build:nuxt": "nuxt build",
+    "build": "npm-run-all -p build:*",
     "dev": "nuxt",
-    "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
